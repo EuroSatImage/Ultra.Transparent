@@ -101,33 +101,15 @@
     <sub name="Subtitle_Italic" font="Regular;30" foregroundColor="undcaaaa" shadowColor="#40101010" shadowOffset="3,3" />
   </subtitles>
   <screen name="InfoBar" position="31,513" size="1239,263" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+    <eLabel position="920,64" size="300,30" text="EUROSAT Ultra.Transparent" foregroundColor="RAEDY" font="Replacement; 25" halign="center" transparent="1" zPosition="10" backgroundColor="background1" />
+    <eLabel position="920,64" size="300,30" text="EUROSAT Ultra.Transparent" foregroundColor="RAEDY" font="Replacement; 25" halign="center" transparent="1" zPosition="10" backgroundColor="background1" />
+    <eLabel position="920,99" size="300,30" text="Skin Design" foregroundColor="RAEDY" font="Replacement; 25" halign="center" transparent="1" zPosition="10" backgroundColor="background1" />
     <ePixmap position="2,2" size="1237,236" zPosition="-1" pixmap="Ultra.Transparent/info_bg.png" />
     <widget source="session.CurrentService" render="Picon" position="14,61" size="220,123" zPosition="1" alphatest="on">
       <convert type="ServiceName">Reference</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1,28" size="230,24" font="Replacement; 18" backgroundColor="transpBlack" foregroundColor="orange" transparent="1" halign="center">
       <convert type="ServiceName">Provider</convert>
-    </widget>
-    <!-- MS Weather -->
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="961,54" size="108,84" source="session.MSNWeather" transparent="1" zPosition="8">
-      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Ultra.Transparent/WeatherIcon/,png</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 18" render="Label" position="1017,141" size="222,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="RAEDY">
-      <convert type="MSNWeather">city</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 18" render="Label" position="1017,121" size="222,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="yellow1">
-      <convert type="MSNWeather">temperature_text,current</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 45" render="Label" position="1070,69" size="126,50" source="session.MSNWeather" zPosition="8" halign="left" transparent="1" foregroundColor="red">
-      <convert type="MSNWeather">temperature_current</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="248,60" size="76,21" font="Regular; 20" halign="left" backgroundColor="background1" transparent="1">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="310,59" size="76,21" font="Regular; 20" halign="left" backgroundColor="background1" transparent="1">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Format: - %H:%M</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="260,7" size="663,41" font="Regular; 30" noWrap="1" backgroundColor="background1" transparent="1" halign="center" foregroundColor="orange">
       <convert type="ServiceName">Name</convert>
@@ -441,91 +423,16 @@
     <eLabel name="tuner D" position="1196,664" size="20,20" foregroundColor="grey" text="D" font="Regular; 18" halign="center" />
     <ePixmap position="-2,-1" zPosition="-1" size="1254,735" pixmap="Ultra.Transparent/info_bg2.png" transparent="1" />
     <!-- MSNWeather -->
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="42,2" size="105,101" source="session.MSNWeather" transparent="1" zPosition="8">
-      <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/Ultra.Transparent/WeatherIcon/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="468,42" size="58,51" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/Ultra.Transparent/WeatherIcon/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="652,42" size="58,51" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/Ultra.Transparent/WeatherIcon/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="840,42" size="58,51" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/Ultra.Transparent/WeatherIcon/,png</convert>
-    </widget>
-    <widget alphatest="blend" render="MSNWeatherPixmap" position="1025,45" size="58,51" source="session.MSNWeather" transparent="1" zPosition="5">
-      <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/Ultra.Transparent/WeatherIcon/,png</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 45" render="Label" position="139,24" size="120,65" source="session.MSNWeather" transparent="1" zPosition="8" halign="center" foregroundColor="red">
-      <convert type="MSNWeather">temperature_current
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 20" render="Label" position="27,99" size="133,24" source="session.MSNWeather" zPosition="8" halign="center" transparent="1" foregroundColor="undcaaaa">
-      <convert type="MSNWeather">temperature_heigh_low,current
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 18" render="Label" position="165,78" size="250,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="yellow">
-      <convert type="MSNWeather">temperature_text,current
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 20" render="Label" position="535,30" size="88,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
-      <convert type="MSNWeather">weekshortday,day2
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 20" render="Label" position="547,59" size="59,19" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center" foregroundColor="cyan1">
-      <convert type="MSNWeather">temperature_high,day2
-</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 18" render="Label" position="549,90" size="59,19" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" noWrap="1" foregroundColor="vert.khaled2">
-      <convert type="MSNWeather">temperature_low,day2
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 20" render="Label" position="715,30" size="88,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
-      <convert type="MSNWeather">weekshortday,day3
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 20" render="Label" position="732,59" size="59,19" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" valign="center" foregroundColor="cyan1">
-      <convert type="MSNWeather">temperature_high,day3
-</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 18" render="Label" position="732,90" size="59,19" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" noWrap="1" foregroundColor="vert.khaled1">
-      <convert type="MSNWeather">temperature_low,day3
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 20" render="Label" position="905,29" size="90,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
-      <convert type="MSNWeather">weekshortday,day4
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 20" render="Label" position="921,59" size="59,19" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" valign="center" foregroundColor="cyan1">
-      <convert type="MSNWeather">temperature_high,day4
-</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 18" render="Label" position="922,87" size="59,18" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" noWrap="1" foregroundColor="vert.khaled1">
-      <convert type="MSNWeather">temperature_low,day4
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 20" render="Label" position="1094,32" size="91,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
-      <convert type="MSNWeather">weekshortday,day5
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Regular; 20" render="Label" position="1107,59" size="59,19" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" valign="center" foregroundColor="cyan1">
-      <convert type="MSNWeather">temperature_high,day5
-</convert>
-    </widget>
-    <widget backgroundColor="background" font="Regular; 18" render="Label" position="1107,89" size="59,18" source="session.MSNWeather" zPosition="3" halign="right" transparent="1" noWrap="1" foregroundColor="vert.khaled1">
-      <convert type="MSNWeather">temperature_low,day5
-</convert>
-    </widget>
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 18" render="Label" position="165,99" size="250,20" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" foregroundColor="RAEDY">
-      <convert type="MSNWeather">city
-</convert>
-    </widget>
-    <eLabel text="%" position="396,35" size="30,38" zPosition="5" halign="center" font="Replacement; 30" backgroundColor="background" transparent="1" />
-    <widget noWrap="1" backgroundColor="background" font="Replacement; 30" render="Label" position="345,35" size="50,38" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" text="89" foregroundColor="cyan1" valign="top">
-      <convert type="MSNWeather">humidity
-</convert>
-    </widget>
-    <eLabel text="Humidity :" position="257,48" size="99,16" zPosition="5" halign="left" font="Replacement; 15" backgroundColor="background" transparent="1" />
+    <ePixmap name="" position="1142,27" size="100, 100" pixmap="Ultra.Transparent/eurosatlogo.png" alphatest="blend" zPosition="15" transparent="1" />
+    <eLabel position="337,30" size="600,35" text="EUROSAT Ultra.Transparent design" foregroundColor="RAEDY" font="Replacement; 30" halign="center" transparent="1" zPosition="10" backgroundColor="background1" />
+    <ePixmap name="" position="357,82" size="32,32" pixmap="Ultra.Transparent/green.png" alphatest="on" transparent="0" zPosition="10" />
+    <eLabel name="key_yellow" position="611,77" size="230,40" text="AudioSelc." halign="center" backgroundColor="background1" transparent="1" foregroundColor="yellow" font="Regular; 27" zPosition="5" />
+    <ePixmap name="" position="72,82" size="32,32" pixmap="Ultra.Transparent/red.png" alphatest="on" transparent="0" />
+    <eLabel name="key_green" position="391,77" size="160,40" text="PLUGINs" halign="center" backgroundColor="background1" transparent="1" foregroundColor="green" font="Regular; 27" zPosition="5" />
+    <eLabel name="key_red" position="106,77" size="230,40" text="Epg" halign="center" backgroundColor="background1" transparent="1" foregroundColor="red" font="Regular; 27" />
+    <ePixmap name="" position="857,82" size="32,32" pixmap="Ultra.Transparent/blue.png" alphatest="on" transparent="0" zPosition="10" />
+    <ePixmap name="" position="577,82" size="32,32" pixmap="Ultra.Transparent/yellow.png" alphatest="on" transparent="0" zPosition="10" />
+    <eLabel name="key_blue" position="891,77" size="220,40" text="EuroPanel" halign="center" backgroundColor="background1" transparent="1" foregroundColor="blue" font="Regular; 27" zPosition="5" />
   </screen>
   <screen name="RadioInfoBar" position="50,500" size="1184,154" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap position="1,4" size="1184,50" zPosition="-2" pixmap="Ultra.Transparent/info_bg1.png" />
@@ -895,6 +802,189 @@
 				}
 			</convert>
     </widget>
+  </screen>
+  <screen name="CleanupWizard" position="0,0" size="1280,720" title="CleanupWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+    <widget name="rc" position="990,110" size="154,500" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" zPosition="10" alphatest="on" />
+    <widget name="arrowdown" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+  </screen>
+  <screen name="DefaultSatLists" position="0,0" size="1280,720" title="DefaultSatLists" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+  </screen>
+  <screen name="DefaultWizard" position="0,0" size="1280,720" title="DefaultWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+  </screen>
+  <screen name="DreamPackageWizard" position="0,0" size="1280,720" title="DreamPackageWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+  </screen>
+  <screen name="ImageWizard" position="0,0" size="1280,720" title="ImageWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+    <widget name="rc" position="990,110" size="154,500" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" zPosition="10" alphatest="on" />
+    <widget name="arrowdown" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+  </screen>
+  <screen name="LanguageWizard" position="0,0" size="1280,720" title="LanguageWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="text" position="640,120" size="500,240" font="Regular;23" backgroundColor="background" transparent="1" />
+    <widget source="languages" render="Listbox" position="400,80" size="550,480" zPosition="3" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel60.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [
+				MultiContentEntryText(pos = (130, 17), size = (390, 60), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmap(pos = (20, 10), size = (60, 40), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Regular", 24)],
+				"itemHeight": 60
+				}
+			</convert>
+    </widget>
+    <widget name="rc" position="990,110" size="154,500" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" zPosition="10" />
+    <widget name="arrowdown" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+  </screen>
+  <screen name="NetworkWizard" position="0,0" size="1280,720" title="NetworkWizard" flags="wfNoBorder">
+    <ePixmap position="  0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+    <widget name="rc" position="990,110" size="154,500" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" zPosition="10" alphatest="on" />
+    <widget name="arrowdown" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+  </screen>
+  <screen name="StartWizard" position="0,0" size="1280,720" title="StartWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="710,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="710,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+    <widget name="rc" position="990,110" size="154,500" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" zPosition="10" />
+    <widget name="arrowdown" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+  </screen>
+  <screen name="VideoWizard" position="0,0" size="1280,720" title="VideoWizard" flags="wfNoBorder">
+    <ePixmap position="   0,  0" size="1280,720" zPosition="-1" pixmap="Ultra.Transparent/back1.png" />
+    <widget name="wizard" position="140, 50" size="200,250" pixmap="Ultra.Transparent/wizard.png" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="languagetext" position="100,320" size="250,30" zPosition="1" font="Regular;24" halign="center" valign="center" backgroundColor="un9f1313" transparent="1" />
+    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="100,350" size="250,2" alphatest="on" />
+    <widget name="text" position="400,80" size="550,300" font="Regular;25" backgroundColor="background" transparent="1" />
+    <ePixmap position="135,390" size="750,1" pixmap="Ultra.Transparent/barre/sep750.png" />
+    <widget source="list" render="Listbox" position="150,420" size="510,245" zPosition="1" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" transparent="1">
+      <convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (20, 3), size = (760, 29), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 25)],
+				"itemHeight": 35
+				}
+			</convert>
+    </widget>
+    <widget name="config" position="150,420" size="510,245" zPosition="2" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel25.png" transparent="1" />
+    <widget name="portpic" position="750,465" size="150,150" zPosition="10" transparent="1" alphatest="on" />
+    <widget name="rc" position="990,110" size="154,500" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" zPosition="10" />
+    <widget name="arrowdown" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" position="-100,-100" size=" 37, 70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="on" />
   </screen>
   <!-- LCD/OLED Screens -->
   <screen name="ChannelSelectionSummary" position="0,0" size="132,64">
@@ -1625,6 +1715,15 @@
     <widget source="Title" render="Label" position="78,9" size="650,33" zPosition="1" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
     <widget name="wait" position="63,83" size="664,444" zPosition="1" backgroundColor="background" transparent="1" />
   </screen>
+  <screen name="HelpMenu" position="center,center" size="1200,600" title="HelpMenu" backgroundColor="transparent" flags="wfNoBorder">
+    <ePixmap position="  0, 0" size="1200,600" zPosition="-1" pixmap="Ultra.Transparent/menu_bg3.png" />
+    <eLabel text="HelpMenu" position="50,6" size="750, 33" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
+    <widget name="list" position="65,75" size="710,444" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel35.png" backgroundColor="background1" transparent="1" />
+    <widget name="rc" pixmaps="Ultra.Transparent/rc.png,Ultra.Transparent/rcold.png" position="935,60" zPosition="10" size="154,500" alphatest="on" />
+    <widget name="arrowdown" pixmap="skin_default/arrowdown.png" position="778,418" zPosition="11" size="62,122" alphatest="on" />
+    <widget name="arrowup" pixmap="skin_default/arrowup.png" position="780,97" zPosition="11" size="57,121" alphatest="on" />
+    <widget name="long_key" position="750,565" size="330,28" font="Regular;25" halign="center" foregroundColor="yellow1" backgroundColor="background" transparent="1" />
+  </screen>
   <screen name="Ipkg" position="center,center" size="800,608" title="Software Update..." backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap position="0,-2" size="800,608" zPosition="-1" pixmap="Ultra.Transparent/menu_bg2.png" />
     <widget source="Title" render="Label" position="50,8" size="600, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
@@ -1993,18 +2092,18 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="thumbnail" position="0,0" size="265,180" alphatest="on" />
   </screen>
   <!-- MyTube End -->
-  <screen name="NameserverSetup" position="246,31" size="868,629" title="Nameserver Setup" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="-30,-3" size="1100,606" zPosition="-1" pixmap="Ultra.Transparent/menu_bg3.png" />
-    <eLabel text="Nameserver Setup" position=" 50,12" size=" 500, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
-    <widget name="config" position="125,94" size="637,400" zPosition="1" itemHeight="40" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel30.png" transparent="1" />
-    <widget source="introduction" render="Label" position="20,515" size="710,30" font="Regular;26" backgroundColor="background" halign="center" transparent="1" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="8,562" size="250,25" alphatest="on" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/green.png" position="311,562" size="250,25" alphatest="on" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/yellow.png" position="550,590" size="250,2" alphatest="on" />
-    <widget source="key_red" render="Label" position="60,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-    <widget source="key_green" render="Label" position="345,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-    <widget source="key_yellow" render="Label" position="550,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-  </screen>
+  <screen name="NameserverSetup" position="0,0" size="1280,720" title="Nameserver Setup" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap position="136,50" size="950,606" zPosition="-1" pixmap="Ultra.Transparent/menu_bg3.png" />
+  <eLabel text="Nameserver Setup" position="359,64" size=" 500, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
+  <widget name="config" position="286,117" size="637,400" zPosition="1" itemHeight="40" scrollbarMode="showOnDemand" selectionPixmap="Ultra.Transparent/barre/sel30.png" transparent="1" />
+  <widget source="introduction" render="Label" position="250,524" size="710,30" font="Regular;26" backgroundColor="background" halign="center" transparent="1" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="153,600" size="250,30" alphatest="on" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/green.png" position="476,600" size="250,30" alphatest="on" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/yellow.png" position="783,600" size="250,30" alphatest="on" />
+  <widget source="key_red" render="Label" position="196,600" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+  <widget source="key_green" render="Label" position="518,600" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+  <widget source="key_yellow" render="Label" position="824,600" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+</screen>
   <screen name="NetworkAdapterSelection" position="35,49" size="1200,600" title="Select Network Adapter" backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap position="0,0" size="1200,601" zPosition="-1" pixmap="Ultra.Transparent/menu_bg3.png" />
     <eLabel text="Select Network Adapter" position="50,7" size="1000, 33" font="Replacement; 30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" halign="center" />
@@ -2704,28 +2803,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="canceltext" position="30,145" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
     <widget name="oktext" position="270,145" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
   </screen>
-  <screen name="TimerEditList" position="269,57" size="800,608" title="Timer Editor" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="0,0" size="800,608" zPosition="-1" pixmap="Ultra.Transparent/menu_bg2.png" />
-    <eLabel text="Timer Editor" position="73,14" size="650, 33" halign="center" font="Replacement; 30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
-    <widget name="timerlist" position="71,76" size="673,443" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Ultra.Transparent/barre/sel75.png" backgroundPixmap="Ultra.Transparent/barre/sep750.png" transparent="1" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position=" 20,590" size="180,2" alphatest="on" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/green.png" position="200,590" size="180,2" alphatest="on" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/yellow.png" position="380,590" size="180,2" alphatest="on" />
-    <ePixmap pixmap="Ultra.Transparent/buttons/blue.png" position="560,590" size="180,2" alphatest="on" />
-    <widget name="key_red" position=" 20,560" zPosition="1" size="180,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-    <widget name="key_green" position="200,560" zPosition="1" size="180,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-    <widget name="key_yellow" position="380,560" zPosition="1" size="180,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-    <widget name="key_blue" position="560,560" zPosition="1" size="180,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-  </screen>
+  <screen name="TimerEditList" position="118,9" size="1004,700" title="Timer Editor" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap position="83,41" size="800,608" zPosition="-1" pixmap="Ultra.Transparent/menu_bg2.png" />
+  <eLabel text="Timer Editor" position="161,56" size="650, 33" halign="center" font="Replacement; 30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
+  <widget name="timerlist" position="154,111" size="673,443" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Ultra.Transparent/barre/sel75.png" backgroundPixmap="Ultra.Transparent/barre/sep750.png" transparent="1" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/red.png" position="94,597" size="180,30" alphatest="on" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/green.png" position="288,597" size="180,30" alphatest="on" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/yellow.png" position="485,597" size="180,30" alphatest="on" />
+  <ePixmap pixmap="Ultra.Transparent/buttons/blue.png" position="683,597" size="180,30" alphatest="on" />
+  <widget name="key_red" position="125,597" zPosition="1" size="160,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+  <widget name="key_green" position="319,597" zPosition="1" size="160,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+  <widget name="key_yellow" position="517,597" zPosition="1" size="160,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+  <widget name="key_blue" position="717,596" zPosition="1" size="160,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+</screen>
   <screen name="TimerEntry" position="266,62" size="800,608" title="Timer entry" backgroundColor="transparent" flags="wfNoBorder">
-    <ePixmap position="0,0" size="800,608" zPosition="-1" pixmap="Ultra.Transparent/menu_bg2.png" />
-    <eLabel text="Timer entry" position="71,15" size="650, 33" halign="center" font="Replacement; 30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
-    <widget name="config" position="69,80" size="673,443" itemHeight="32" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Ultra.Transparent/barre/sel32.png" transparent="1" />
-    <widget name="cancel" pixmap="Ultra.Transparent/buttons/red.png" position=" 50,590" size="250,2" alphatest="on" />
-    <widget name="ok" pixmap="Ultra.Transparent/buttons/green.png" position="300,590" size="250,2" alphatest="on" />
-    <widget name="canceltext" position=" 50,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-    <widget name="oktext" position="300,560" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
-  </screen>
+  <ePixmap position="0,0" size="800,608" zPosition="-1" pixmap="Ultra.Transparent/menu_bg2.png" />
+  <eLabel text="Timer entry" position="71,15" size="650, 33" halign="center" font="Replacement; 30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />
+  <widget name="config" position="69,80" size="673,443" itemHeight="32" scrollbarMode="showOnDemand" backgroundColor="background" selectionPixmap="Ultra.Transparent/barre/sel32.png" transparent="1" />
+  <widget name="cancel" pixmap="Ultra.Transparent/buttons/red.png" position="70,552" size="250,30" alphatest="on" />
+  <widget name="ok" pixmap="Ultra.Transparent/buttons/green.png" position="446,551" size="250,30" alphatest="on" />
+  <widget name="canceltext" position="115,552" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+  <widget name="oktext" position="494,551" zPosition="1" size="250,30" font="Regular;24" halign="center" backgroundColor="background" transparent="1" />
+</screen>
   <screen name="TimerLog" position="26,74" size="1200,600" title="Timer log" backgroundColor="transparent" flags="wfNoBorder">
     <ePixmap position="0,0" size="1200,600" zPosition="-1" pixmap="Ultra.Transparent/menu_bg3.png" />
     <eLabel text="Timer log" position="49,5" size="650, 33" halign="center" font="Regular;30" backgroundColor="background" shadowColor="black" shadowOffset="-3,-3" transparent="1" />

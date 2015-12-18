@@ -111,6 +111,14 @@
     <widget source="session.CurrentService" render="Label" position="1,28" size="230,24" font="Replacement; 18" backgroundColor="transpBlack" foregroundColor="orange" transparent="1" halign="center">
       <convert type="ServiceName">Provider</convert>
     </widget>
+    <widget source="session.Event_Now" render="Label" position="248,60" size="76,21" font="Regular; 20" halign="left" backgroundColor="background1" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="310,59" size="76,21" font="Regular; 20" halign="left" backgroundColor="background1" transparent="1">
+      <convert type="EventTime">EndTime</convert>
+      <convert type="ClockToText">Format: - %H:%M</convert>
+    </widget>
     <widget source="session.CurrentService" render="Label" position="260,7" size="663,41" font="Regular; 30" noWrap="1" backgroundColor="background1" transparent="1" halign="center" foregroundColor="orange">
       <convert type="ServiceName">Name</convert>
     </widget>
